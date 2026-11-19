@@ -1,0 +1,13 @@
+# Build outputs
+target/
+
+# IDE
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Instructions locales pour agents IA (ne pas commiter)
+docs/AGENTS.md
+AGENTS.md
