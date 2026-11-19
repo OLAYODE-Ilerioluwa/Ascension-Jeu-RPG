@@ -1,7 +1,6 @@
-# GDD — « Ascension » (nom de travail)
+# GDD — « Ascension »
 
-> Nom définitif à choisir : **« Tower of Hell » est à renommer obligatoirement** (marque déposée de Roblox).
-> Idées : *Ascension*, *La Tour Oubliée*, *Spire of Ashes*, *Babel Infernale*.
+> Nom du jeu : **Ascension** (dossier renommé ; « Tower of Hell » est une marque déposée de Roblox, à ne plus utiliser).
 
 ## 1. Concept en une phrase
 
@@ -49,12 +48,50 @@ Un **RPG roguelite tour par tour** où on grimpe une tour de plus en plus danger
 - 3 slots de potions, chacune **limitée en quantité** (achat → consommation réelle).
 - Potions : Soin (+30 PV), Puissance (+10 ATQ, 2 tours), Robustesse (+10 DÉF, 2 tours), Mana (+50 %), Antidote, Foulée (fuir l'étage).
 
-## 6. Art direction
+## 6. Art direction (VALIDÉE — mood board : docs/mockup.html)
 
-- **Pixel art 2D** (16:9), police pixel lisible (ex. *Pixelify Sans*, CC0).
-- Personnages/monstres : paquets d'assets libres ou achetés (itch.io asset packs, 5–15 €, *Kenney*, *LimeZu*).
-- Palette : fonds sombres de tour, avec une couleur d'accent par étage (plus on monte, plus ça chauffe : bleu → violet → rouge).
-- **UI** : cartes de la tour (chemin visualisé), pas de texte de log — feedback visuel + sons.
+**Style validé ensemble** : décors et interface en flat design + personnages en pixel 2D, le tout verrouillé sur une palette unique choisie par l'utilisateur (une seule rampe continue : noir → lavande → bleu-violet → violet → rose → rouge).
+
+### Palette (extraite du mood board, codes exacts)
+
+| Couleur | Hex | Usage |
+|---------|-----|-------|
+| Noir profond | `#0e0d11` | Fond base |
+| Blanc cassé | `#f2ede9` | Texte principal |
+| Lavande | `#b8c0f5` | Accents clairs, détails |
+| Bleu-violet | `#6f7bf0` | Accent principal (base) |
+| Indigo sombre | `#26224d` | Surfaces, panneaux |
+| Violet profond | `#8a5cf0` | Accent du milieu |
+| Mauve | `#c982c9` | Détails milieu |
+| Rose clair | `#f0c2e8` | Accents haut |
+| Bordeaux | `#7a0f3d` | Surfaces hautes |
+| Rouge cerise | `#ea2e5e` | Accent final, ennemis |
+| Rouge sang | `#e8175d` | Sommet, boss final |
+
+### Palette par palier (la tour raconte la progression)
+
+| Palier | Étages | Fond | Accent | Ennemi |
+|--------|--------|------|--------|--------|
+| Base | 1–8 | `#0e0d11` | bleu-violet `#6f7bf0` | rouge cerise `#ea2e5e` |
+| Milieu | 9–16 | `#120f1e` | violet `#8a5cf0` | rose `#e8547c` |
+| Haut | 17–24 | `#190d16` | rouge cerise `#ea2e5e` | rose clair `#f0c2e8` |
+| Sommet | 25 | `#08040a` | rouge sang `#e8175d` | silhouette pâle `#c8ccf8` (boss) |
+
+Détails à reproduire (déjà éprouvés dans le mood board) : halo de couleur derrière chaque perso, flash blanc à l'impact, chiffres de dégâts flottants (blanc = coup, bleu = magique, jaune géant = spéciale).
+
+### Règles des personnages pixel (valables pour tout sprite du jeu)
+
+1. **Palette verrouillée** : les sprites n'utilisent que les couleurs du tableau ci-dessus (+ noir/blanc). Recolorer un pixel art existant est très facile, pas besoin de savoir dessiner.
+2. **Un seul format** : tous les persos au même ratio (48×48 visé) et même taille de pixels.
+3. **Rendu net dans Unity** : filtrage « Point (no filter) » sur tous les sprites, sinon les contours pixelisés deviennent flous. Piège classique du débutant Unity 2D.
+
+Référence de style combo pixel+flat : *Loop Hero*.
+
+### UI
+
+- Boutons d'action : **colonne verticale à gauche, derrière le perso**, rectangles arrondis, bordure fine, glissement léger au survol.
+- Police unique lisible (Nunito ou Rubik).
+- Sources d'assets (gratuits, licence permissive) : Kenney (CC0, UI et particules), game-icons.net (CC0, icônes de compétences et d'objets, recolorables dans la palette).
 
 ## 7. Audio
 
@@ -82,14 +119,14 @@ Un **RPG roguelite tour par tour** où on grimpe une tour de plus en plus danger
 
 - **Moteur : Unity 6 (Personal)** — gratuit en dessous de 200k $ de CA.
 - Langage : **C#**.
-- Dump de `Tower of hell` → nommer le projet **Ascension** (ou nom retenu) dès le premier commit Unity.
+- Projet Unity nommé **Ascension** (fait : dossier `Ascension-Jeu-RPG`).
 - Vcs : git, avec **Unity LFS** (pas de commit de la Library/).
 
 ## 11. Journal des risques
 
 | Risque | Mitigation |
 |--------|------------|
-| Nom → marque déposée de Roblox | renommer immédiatement |
+| Nom | Faisait référence à une marque déposée de Roblox | Renommé en Ascension, dossier et docs mis à jour |
 | Portage mécaniques long | vertical slice d'abord (étages 1–5 jouables) |
 | Assets / DA coûteux | packs libres ou achetés, jamais art custom au début |
 | Scope creep | tout ce qui n'est pas dans la section 8 est **refusé pour v1** |

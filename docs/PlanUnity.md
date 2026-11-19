@@ -12,7 +12,7 @@ ouvre un **nouveau dépôt git** pour le projet Unity.
 
 ## Étape 0 — Mise en place (1 journée)
 
-- [ ] Renommer le jeu (GDD §1) — jamais dans les pubs/docs le nom actuel.
+- [x] Renommer le jeu : **Ascension** (dossier `Ascension-Jeu-RPG`). Ne plus utiliser l'ancien nom dans aucune publication.
 - [ ] Installer **Unity Hub** puis **Unity 6 LTS** (module *Windows Build Support*).
 - [ ] Nouveau projet Unity · template **2D (Built-in RP ou URP 2D)**.
 - [ ] Git init + `.gitignore` Unity (celui de github/gitignore) + `Git LFS` pour `Assets/**`.
