@@ -13,9 +13,9 @@ ouvre un **nouveau dépôt git** pour le projet Unity.
 ## Étape 0 — Mise en place (1 journée)
 
 - [x] Renommer le jeu : **Ascension** (dossier `Ascension-Jeu-RPG`). Ne plus utiliser l'ancien nom dans aucune publication.
-- [ ] Installer **Unity Hub** puis **Unity 6 LTS** (module *Windows Build Support*).
-- [ ] Nouveau projet Unity · template **2D (Built-in RP ou URP 2D)**.
-- [ ] Git init + `.gitignore` Unity (celui de github/gitignore) + `Git LFS` pour `Assets/**`.
+- [x] Installer **Unity Hub** puis **Unity 6 LTS** (Editor **6000.4.8f1** installé ; Smart App Control a dû être désactivé — il bloquait les DLL de compilation de Unity).
+- [x] Nouveau projet Unity · template **Universal 2D (URP)**. Projet dans `Documents/Ascension/Ascension(Unity)` (le dépôt Java vit dans le dossier parent, à côté).
+- [x] Git init + `.gitignore` Unity + Git LFS (`.gitattributes`) dans le projet Unity. Dépôt Java pushé sur GitHub.
 - [ ] Créer la page itch.io en **private** dès le premier build jouable (feedback boucle).
 
 ## Étape 1 — Vertical slice (2–4 semaines)
